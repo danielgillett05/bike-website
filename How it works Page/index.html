@@ -12,13 +12,23 @@
     <title>Pedal Pass</title>
 
     <style>
-        /* Remove default margin & padding */
-        body, html {
+
+body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow-x: hidden;
+            margin: 0;
+                background-image: url('/bike-website/Images/Multiple\ Bikes.jpeg'); 
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+                font-family: 'elza-text', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                color: white;
         }
 
         /* Transparent Navbar */
@@ -58,7 +68,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="/Images/Logomark png.png" alt="Logo" width="150" height="80" class="d-inline-block align-text-center">
+                <img src="/bike-website/Images/Logomark png.png" alt="Logo" width="150" height="80" class="d-inline-block align-text-center">
             </a>            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,6 +88,66 @@
             </div>
         </div>
     </nav>
+
+
+    <!-- How It Works Section -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">How It Works</h1>
+
+        <!-- Step 1: Select Your Ride -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">1. Select Your Ride</h5>
+                        <p class="card-text">At Pedal Pass, we offer three types of eco-friendly transportation options to suit your needs:</p>
+                        <ul>
+                            <li><strong>E-Scooter:</strong> Perfect for zipping through the city with ease.</li>
+                            <li><strong>E-Bike:</strong> Ideal for longer, more comfortable rides with pedal-assist.</li>
+                            <li><strong>Standard Bike:</strong> A classic, simple, and eco-friendly way to get around.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Payment -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">2. Payment</h5>
+                        <p class="card-text">Pay online for your ride, securely and hassle-free. You’ll only pay for the time you use, by the minute.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Unlock & Ride -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">3. Unlock & Ride</h5>
+                        <p class="card-text">Once your payment is confirmed, you can head to your selected bike or scooter and unlock it. The website will guide you through the process of unlocking and starting your ride.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Return Your Ride -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">4. Return Your Ride</h5>
+                        <p class="card-text">When you’re finished, simply return your bike or scooter to one of our designated drop-off locations around the city. Lock it securely, and your ride will automatically end online. You’ll be billed based on the total time you spent riding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-5">
+            <a href="/bike-website/Bikes Page/index.html" class="btn btn-danger btn-lg">Get Started Today!</a>
+        </div>
+    </div>
 
 
     <!-- Bootstrap JavaScript -->
