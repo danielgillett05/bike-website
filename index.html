@@ -27,22 +27,58 @@
             font-weight: 300;
         }
 
-        /* Transparent Navbar */
-        .navbar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: transparent !important;
-        }
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent black */
+    padding: 15px 50px; /* Adds space from the sides */
+    border-radius: 0 0 15px 15px; /* Soft round edges at the bottom */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    backdrop-filter: blur(10px); /* Blurred background for modern look */
+}
 
-        /* Navbar colour and size */
-        .navbar .nav-link,
-        .navbar-brand {
-            color: white !important;
-            font-size: 1.4rem;
-        }
+/* Navbar Links */
+.navbar .nav-link {
+    color: white !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Link Hover Effect */
+.navbar .nav-link:hover {
+    color: #ff4747 !important; /* Red accent color */
+    transform: scale(1.05); /* Slight size increase */
+}
+
+/* Navbar Brand (Logo) */
+.navbar-brand img {
+    width: 130px; /* Adjust logo size */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Logo Hover Effect */
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Slight pop effect */
+}
+
+/* Navbar Button (for mobile view) */
+.navbar-toggler {
+    border: none;
+}
+
+/* Toggler Icon Color */
+.navbar-toggler-icon {
+    background-color: white; /* Ensures visibility */
+    border-radius: 5px;
+}
+
 
         /* Hero Section */
         .hero {
@@ -69,7 +105,19 @@
             margin-top: 20px;
             padding: 12px 24px;
             font-size: 1.7rem;
+            background-color: red;
+            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
         }
+
+        .hero .btn:hover {
+    background-color: darkred; /* Darker red on hover */
+    border-color: darkred; /* Ensure border matches */
+}
+
+
+
+
     </style>
 </head>
 
@@ -78,7 +126,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="/bike-website/Images/Logomark png.png" alt="Logo" width="150" height="80"
+                <img src="/bike-website/Images/Logomark png.png" alt="Logo" width="100" height="75"
                     class="d-inline-block align-text-center">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -94,7 +142,7 @@
                         <a class="nav-link" href="/bike-website/How it works Page/index.html">How it works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/bike-website/Map Page/index.html">Map</a>
+                        <a class="nav-link" href="./map/index.html">Map</a>
                     </li>
                 </ul>
             </div>
@@ -106,6 +154,51 @@
         <h1>Ride More, Worry Less.</h1>
         <a href="/bike-website/Bikes Page/index.html" class="btn btn-danger">Our Vehicles</a>
     </section>
+
+
+
+    <!-- Memberships Section -->
+<section class="container py-5">
+    <h2 class="text-center text-dark mb-4">Membership Plans</h2>
+    <div class="row justify-content-center">
+        <!-- Basic Plan -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header bg-danger text-white">Basic</div>
+                <div class="card-body">
+                    <h5 class="card-title">$9.99 / month</h5>
+                    <p class="card-text">Access to standard bikes & unlimited rides.</p>
+                    <a href="#" class="btn btn-danger">Get Started</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Premium Plan -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header bg-dark text-white">Premium</div>
+                <div class="card-body">
+                    <h5 class="card-title">$19.99 / month</h5>
+                    <p class="card-text">Access to e-bikes & priority reservations.</p>
+                    <a href="#" class="btn btn-dark">Get Started</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Elite Plan -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header bg-danger text-white">Elite</div>
+                <div class="card-body">
+                    <h5 class="card-title">$29.99 / month</h5>
+                    <p class="card-text">All premium benefits + exclusive perks.</p>
+                    <a href="#" class="btn btn-danger">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
     <!-- Bootstrap JavaScript -->

@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Bikes - Pedal Pass</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/msc2lgt.css">
-    
-    <style>
 
-        /* Remove default margin & padding */
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Pedal Pass</title>
+
+    <style>
+ 
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow-x: hidden;
+                background-image: url('/bike-website/Images/bikebackground.jpg'); 
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+                font-family: 'elza-text', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                color: white;
         }
+
 
 /* Navbar Styling */
 .navbar {
@@ -70,48 +83,68 @@
     border-radius: 5px;
 }
 
+        /* Hero Section */
+        .hero {
+            background: url('/bike-website/Images/bikebackground.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+
+        .map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjusts the height to fill most of the screen */
+    width: 100%;
+    margin-top: 200px;
+}
+
+iframe {
+    width: 80%;
+    height: 70vh; /* Adjust height as needed */
+    border: 3px solid white; /* Optional: Makes the map stand out */
+    border-radius: 10px; /* Optional: Smooth edges */
+}
+
+/* Styling for the View Larger Map button */
+.map-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: white; /* Change text color */
+    font-size: 2rem; /* Adjust size */
+    font-family: 'elza-text', sans-serif;
+    font-style: normal;
+    font-weight: 450;
+}
+
+.map-link a {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.map-link a:hover {
+    background-color: darkred;
+}
         
-        body {
-                margin: 0;
-                padding: 0;
-                background-image: url('/bike-website/Images/bikebackground.jpg'); 
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                height: 100vh;
-                font-family: 'elza-text', sans-serif;
-                font-style: normal;
-                font-weight: 300;
-            }
-
-
-            /* Button Styling */
-            .btn-find-electric-commuter {
-    background-color: red !important;
-    border-color: red !important;
-    color: white !important;
-}
-
-.btn-find-electric-commuter:hover {
-    background-color: darkred !important;
-    border-color: darkred !important;
-}
-
-
-
-
-
-/* Fix Card Spacing */
-.card {
-    margin-top: 250px; /* Adjust the value as needed */
-}
-
     </style>
 </head>
-<body>
 
-     <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg">
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="/bike-website/Images/Logomark png.png" alt="Logo" width="100" height="75" class="d-inline-block align-text-center">
@@ -135,37 +168,19 @@
         </div>
     </nav>
 
-    <div class="container my-5">
-        <div class="card">
-            <img src="/bike-website/Images/E-Bike2.jpg" alt="Electric Commuter E-Bike" class="card-img-top">
-            <div class="card-body">
-                <h2 class="card-title">Electric Commuter- Electric Bike</h2>
-                <p class="card-text">Go further with the Electric Commuter, the perfect blend of power and convenience for your daily rides.</p>
-
-                <h3>Key Features:</h3>
-                <ul>
-                    <li>Pedal assist for effortless riding</li>
-                    <li>Battery range: 50 km per charge</li>
-                    <li>Speeds up to 32 km/h</li>
-                    <li>Durable and weather-resistant</li>
-                    <li>Comfortable saddle for long rides</li>
-                    <li>Built-in LED lights for night riding</li>
-                </ul>
-
-                <h3>Pricing:</h3>
-                <p>Rent for only <strong>$0.40</strong> per minute.</p>
-
-                <div class="text-center">
-                    <a href="/bike-website/map/index.html" class="btn btn-find-electric-commuter btn-lg">Find your nearest Electric Commuter!</a>
-
-                </div>
-            </div>
-        </div>
+    <div class="map-container">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-2.5966116786003117%2C51.44976804576801%2C-2.5934144854545598%2C51.45126239063594&amp;layer=mapnik&amp;marker=51.4505152243158%2C-2.5950130820274353"></iframe>
     </div>
-
-
+    
+    <div class="map-link">
+        <a href="https://www.openstreetmap.org/?mlat=51.450515&amp;mlon=-2.595013#map=19/51.450515/-2.595013" target="_blank">
+            View Larger Map
+        </a>
+    </div>
+    
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
