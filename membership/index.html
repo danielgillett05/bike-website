@@ -21,10 +21,25 @@
             width: 100%;
             height: 100%;
             overflow-x: hidden;
-            color: white; /* Change text color */
+            color: black; /* Change text color */
             font-family: 'elza-text', sans-serif;
             font-style: normal;
             font-weight: 300;
+        }
+
+        body {
+            background: url('/bike-website/Images/bikebackground.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
 /* Navbar Styling */
@@ -80,47 +95,6 @@
 }
 
 
-        /* Hero Section */
-        .hero {
-            background: url('/bike-website/Images/Man\ on\ Bike.jpeg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            width: 100%;
-        }
-
-        /* Slogan Styling */
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-        }
-
-        /* Button Styling */
-        .hero .btn {
-            margin-top: 20px;
-            padding: 12px 24px;
-            font-size: 1.7rem;
-            background-color: red;
-            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-
-        }
-
-        .hero .btn:hover {
-    background-color: darkred; /* Darker red on hover */
-    border-color: darkred; /* Ensure border matches */
-}
-
-.bg-bronze { background-color: #cd7f32; }
-    .btn-bronze { background-color: #cd7f32; color: white; }
-    .bg-silver { background-color: #c0c0c0; }
-    .btn-silver { background-color: #c0c0c0; color: white; }
-    .bg-gold { background-color: #ffd700; }
-    .btn-gold { background-color: #ffd700; color: black; }
 
 
 
@@ -156,56 +130,28 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Ride More, Worry Less.</h1>
-        <a href="/bike-website/Bikes Page/index.html" class="btn btn-danger">Our Vehicles</a>
-    </section>
-
-
-
-<!-- Memberships Section -->
-<section class="container py-5">
-    <h2 class="text-center text-dark mb-4">Membership Plans</h2>
-    <div class="row justify-content-center">
-        <!-- Basic Plan -->
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-header bg-bronze text-white">Bronze</div>
-                <div class="card-body">
-                    <h5 class="card-title">$9.99 / month</h5>
-                    <p class="card-text">Access to standard bikes & unlimited rides.</p>
-                    <a href="/bike-website/membership/index.html" class="btn btn-bronze">Get Started</a>
-                </div>
+    <div class="container">
+        <h2 class="text-center mb-4">Get Started with Pedal Pass</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
             </div>
-        </div>
-        
-        <!-- Premium Plan -->
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-header bg-silver text-white">Silver</div>
-                <div class="card-body">
-                    <h5 class="card-title">$19.99 / month</h5>
-                    <p class="card-text">Access to e-bikes & priority reservations.</p>
-                    <a href="/bike-website/membership/index.html" class="btn btn-silver">Get Started</a>
-                </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
             </div>
-        </div>
-        
-        <!-- Elite Plan -->
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-header bg-gold text-white">Gold</div>
-                <div class="card-body">
-                    <h5 class="card-title">$29.99 / month</h5>
-                    <p class="card-text">All premium benefits + exclusive perks.</p>
-                    <a href="/bike-website/membership/index.html" class="btn btn-gold">Get Started</a>
-                </div>
+            <div class="mb-3">
+                <label for="membership" class="form-label">Select Membership Plan</label>
+                <select class="form-select" id="membership" required>
+                    <option value="bronze">Bronze - $9.99/month</option>
+                    <option value="silver">Silver - $19.99/month</option>
+                    <option value="gold">Gold - $29.99/month</option>
+                </select>
             </div>
-        </div>
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        </form>
     </div>
-</section>
-
 
 
     <!-- Bootstrap JavaScript -->
